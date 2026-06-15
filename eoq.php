@@ -60,7 +60,7 @@ $kategori = mysqli_query($conn, "SELECT * FROM kategori");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analisis EOQ - EOQ Sistem</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
@@ -82,14 +82,21 @@ $kategori = mysqli_query($conn, "SELECT * FROM kategori");
                 <div class="sidebar-user-name"><?= $_SESSION['nama']; ?></div>
                 <div class="sidebar-user-role" style="text-transform: uppercase;"><?= $_SESSION['role']; ?></div>
             </div>
-            <ul>
-                <li><a href="dashboard.php" class="active"><i class="fa-solid fa-house"></i> Dashboard</a></li>
-                <li><a href="produk.php"><i class="fa-solid fa-box"></i> Data Barang</a></li>
-                <li><a href="kategori.php"><i class="fa-solid fa-tags"></i> Kategori</a></li>
-                <!-- <li><a href="pos.php"><i class="fa-solid fa-cash-register"></i> Kasir (POS)</a></li> -->
+            <ul class="sidebar-menu">
+                <li class="sidebar-menu-title">Menu Utama</li>
+                <li><a href="dashboard_owner.php" class="active"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+                <li><a href="produk_owner.php"><i class="fa-solid fa-box"></i> Data Barang</a></li>
+                <li><a href="kategori_owner.php"><i class="fa-solid fa-tags"></i> Kategori</a></li>
+                <!-- <li><a href="pos.php"><i class="fa-solid fa-cash-register"></i> Kasir POS</a></li> -->
                 <li><a href="eoq.php"><i class="fa-solid fa-calculator"></i> Analisis EOQ</a></li>
-                <li><a href="laporan.php"><i class="fa-solid fa-file-lines"></i> Laporan</a></li>
-                <li><a href="logout.php" style="color: #ef4444;"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+                <li><a href="laporan_owner.php"><i class="fa-solid fa-file-lines"></i> Laporan</a></li>
+                <li class="sidebar-divider"></li>
+                <li class="sidebar-menu-title">Pengaturan</li>
+                <li><a href="akun.php"><i class="fa-solid fa-user-gear"></i> Akun Saya</a></li>
+                <li><a href="users.php"><i class="fa-solid fa-users"></i> Kelola User</a></li>
+                <li><a href="pengaturan.php"><i class="fa-solid fa-gear"></i> Pengaturan</a></li>
+                <li class="sidebar-divider"></li>
+                <li><a href="../logout.php" style="color: var(--danger);"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
             </ul>
         </aside>
 
