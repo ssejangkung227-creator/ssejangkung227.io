@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['login'])) {
-    header("Location: ../login.php");
+    header("Location: login.php");
     exit;
 }
 include 'koneksi.php';
@@ -41,7 +41,7 @@ $kategori = mysqli_query($conn, "SELECT * FROM kategori ORDER BY id_kategori DES
 <head>
     <meta charset="UTF-8">
     <title>Kategori - EOQ Sistem</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .alert-success {
