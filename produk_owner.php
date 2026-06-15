@@ -78,7 +78,7 @@ $kategori = mysqli_query($conn, "SELECT * FROM kategori");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Barang - EOQ Sistem</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .alert-success { background: #10b981; color: white; padding: 10px; border-radius: 8px; margin-bottom: 15px; }
@@ -115,7 +115,7 @@ $kategori = mysqli_query($conn, "SELECT * FROM kategori");
                 <li><a href="users.php"><i class="fa-solid fa-users"></i> Kelola User</a></li>
                 <li><a href="pengaturan.php"><i class="fa-solid fa-gear"></i> Pengaturan</a></li>
                 <li class="sidebar-divider"></li>
-                <li><a href="../logout.php" style="color: var(--danger);"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+                <li><a href="logout.php" style="color: var(--danger);"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
             </ul>
         </aside>
         <main class="content">
